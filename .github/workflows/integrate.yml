@@ -1,12 +1,15 @@
-name: Node Continuous Integration
+name: 'Node Continuous Integration'
 
 on:
-  pull_request:
+  push:
     branches: [main]
 
 jobs:
-  test_pull_reques:
+  build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
