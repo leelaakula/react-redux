@@ -21,7 +21,7 @@ module.exports = {
     new webpackBundleAnalyzer.BundleAnalyzerPlugin({ analyzerMode: 'static' }),
 
     new MiniCssExtractPlugin({
-      filename: '[name].[conentehash].css'
+      filename: '[name].[contenthash].css'
     }),
 
     new webpack.DefinePlugin({
