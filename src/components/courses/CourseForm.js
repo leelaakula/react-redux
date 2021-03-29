@@ -22,11 +22,10 @@ const CourseForm = ({
       <TextInput
         name='title'
         label='Title'
-        value={course.title}
+        value={course.title || ''}
         onChange={onChange}
         error={errors.title}
       />
-
       <SelectInput
         name='authorId'
         label='Author'
@@ -39,7 +38,6 @@ const CourseForm = ({
         onChange={onChange}
         error={errors.author}
       />
-
       <TextInput
         name='category'
         label='Category'
@@ -47,7 +45,6 @@ const CourseForm = ({
         onChange={onChange}
         error={errors.category}
       />
-
       <button type='submit' disabled={saving} className='btn btn-primary'>
         {saving ? 'Saving...' : 'Save'}
       </button>
